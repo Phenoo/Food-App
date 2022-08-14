@@ -107,11 +107,7 @@ img{
 }
 @media(max-width: 22em){
   input{
-    font-size: 0.75rem;
-  }
-}@media(max-width: 20em){
-  input{
-    font-size: 0.65rem;
+    font-size: 0.5rem;
   }
 }
 }
@@ -188,7 +184,7 @@ display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 3rem;
 
-@media(max-width: 800px){
+@media(max-width: 50em){
 grid-template-columns: 100%;
 gap: 1rem;
 }
