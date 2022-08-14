@@ -26,6 +26,27 @@ button{
   color: ${props => props.theme.white};
   background-color: ${props => props.theme.body};
 }
+
+.link{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  p{
+    @media(max-width: 31em){
+      font-size: 0.75rem;
+    }
+  }
+
+  span{
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  a{
+    font-weight: 600;
+    color: ${props => props.theme.body};
+  }
+}
 `
 const Container = styled.div`
   width: 85%;
@@ -96,26 +117,7 @@ const BoxII = styled.div`
     }
   }
 
-  .link{
-    display: flex;
-    align-items: center;
-    gap: 5px;
 
-    p{
-      @media(max-width: 31em){
-        font-size: 0.75rem;
-      }
-    }
-
-    span{
-      font-size: 1rem;
-      font-weight: 600;
-    }
-    a{
-      font-weight: 600;
-      color: ${props => props.theme.body};
-    }
-  }
 `
 
 
@@ -161,8 +163,14 @@ const SignIn = () => {
             <Button text='sign in' classway='primary-btn' />
           </form>
           <div className="link">
-          <p>New to <span>Salad.</span></p>
-          <Link to='/signup'> Sign up</Link>
+            <div>
+              <p>New to <span>Salad.</span></p>
+            </div>
+            <div>
+              <p>
+                <Link to='/signup'> Sign up</Link>
+              </p>
+            </div>
           </div>
         </BoxII>
       </Container>
