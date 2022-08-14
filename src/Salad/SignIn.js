@@ -90,6 +90,11 @@ const BoxII = styled.div`
           text-transform: capitalize;
           color: #000;
         }
+        @media(max-width: 30em){
+          font-size: 0.75rem;
+          &:placeholder{
+            font-size: 0.75rem;
+          }
     }
   }
 
