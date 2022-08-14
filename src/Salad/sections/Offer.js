@@ -57,15 +57,24 @@ text-transform: capitalize;
 @media(max-width: 800px){
   font-size: ${props => props.theme.fontxl};
 }
+@media(max-width: 24em){
+  font-size: ${props => props.theme.fontlg};
+}
+
 `
 const SubText = styled.p`
-width: 80%;
-margin: 10px 0;
-font-size: ${props => props.theme.fontmd};
+  width: 80%;
+  margin: 10px 0;
+  font-size: ${props => props.theme.fontmd};
 
-@media(max-width: 800px){
-  font-size: ${props => props.theme.fontsm};
-}
+  @media(max-width: 50em){
+    font-size: ${props => props.theme.fontsm};
+  }
+  @media(max-width: 24em){
+    font-size: 0.7rem;
+  }
+
+
 `
 const ImgBox = styled.div`
 background: url(${Item1}) center center;
@@ -83,7 +92,7 @@ cursor: pointer;
   width: 100%;
   height: 100%;
   top: 0;
-  background-color: rgba(128, 128, 128, 0.3);
+  background-color: rgba(0, 0, 0, 0.7);
 
   div{
     padding: 3rem 2rem;
@@ -91,15 +100,21 @@ cursor: pointer;
 
   h4{
     text-transform: capitalize;
-  font-size:  ${props => props.theme.fontxl};
+    font-size:  ${props => props.theme.fontxl};
   }
 
   p{
     width: 75%;
     line-height: 30px;
 
-    @media(max-width: 700px){
+    @media(max-width: 43.75em){
+      width: 90%;
       line-height: 20px;
+      font-size:  ${props => props.theme.fontsm}; 
+    }
+    @media(max-width: 24.75em){
+      width: 100%;
+      font-size: 0.75rem;
     }
   }
 
@@ -121,6 +136,10 @@ cursor: pointer;
     font-family: 'Abel';
     font-size:  ${props => props.theme.fontxxxl};
     color: ${props => props.theme.body};
+
+    @media(max-width: 40em){
+      font-size:  ${props => props.theme.fontxxl};
+    }    
     }  
     span{
       text-transform: uppercase;
@@ -152,24 +171,30 @@ span{
 
 .head{
   display: flex;
-align-items: center;
-gap: 1rem;
+  align-items: center;
+  gap: 1rem;
 
 h4{
   font-size:  ${props => props.theme.fontlg};
   text-transform: capitalize;
   font-family: 'Jost';
 
-  @media(max-width: 800px){
+  @media(max-width: 50em){
     font-size: ${props => props.theme.fontmd};
+  }
+  @media(max-width: 32em){
+    font-size: 0.75rem;
   }
 }
 h6{
   font-size:  ${props => props.theme.fontlg};
   color: ${props => props.theme.body};
 
-  @media(max-width: 800px){
+  @media(max-width: 50em){
     font-size: ${props => props.theme.fontmd};
+  }
+  @media(max-width: 22em){
+    font-size: 0.75rem;
   }
 }
 }
@@ -178,14 +203,29 @@ p{
   margin-top: 1rem;
   width: 90%;
   font-size: ${props => props.theme.fontsm};
-  @media(max-width: 800px){
-    font-size: 12px;
+  @media(max-width: 50em){
+    font-size: 0.8rem;
+  }
+  @media(max-width: 31em){
+    margin-top: 0.6rem;
+  }
+  @media(max-width: 22em){
+    font-size: 0.65rem;
+    
   }
 }
 img{
   width: 100px;
-  height: 100px;
+  aspect-ratio: 1/1;
   border-radius: 10px;
+
+
+  @media(max-width: 31em){
+    width: 80px;
+  }
+  @media(max-width: 22em){
+    width: 70px;
+  }
 }
 
 

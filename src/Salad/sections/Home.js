@@ -115,14 +115,17 @@ font-size: 4rem;
 
 @media(max-width: 580px){
   font-size: 3.5rem;
-  }
+}
 
   @media(max-width: 450px){
     font-size: 3rem;
     }
     @media(max-width: 400px){
       font-size: 2.5rem;
-      }
+    }
+    @media(max-width: 22em){
+      font-size: 2rem;
+    }
 `
 
 const SubText = styled.p`

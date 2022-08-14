@@ -99,11 +99,20 @@ img{
     width: 100%;
     display: flex;
     gap: 5px;
-  align-items: center;
+    align-items: center;
   }
 
 @media(max-width: 800px){
   width: 100%;
+}
+@media(max-width: 22em){
+  input{
+    font-size: 0.75rem;
+  }
+}@media(max-width: 20em){
+  input{
+    font-size: 0.65rem;
+  }
 }
 }
 
@@ -119,6 +128,10 @@ const Title = styled.h2`
 font-size: ${props => props.theme.fontlg};
 text-transform: capitalize;
 margin: 10px 0;
+
+@media(max-width: 40em){
+    font-size: 1rem;
+}
 `
 
 const SubText = styled.h6`
@@ -127,6 +140,15 @@ font-size: ${props => props.theme.fontmd};
 color: #808080;
 color: #fff; 
 opacity: 0.55;
+
+@media(max-width: 40em){
+  font-size: 0.75rem;
+}
+
+@media(max-width: 31em){
+  font-size: 0.6rem;
+}
+
 `
 const Bottom = styled.div`
 width: 85%;
@@ -184,16 +206,29 @@ margin-top: 2rem;
 
 
 const Foot = styled.div`
+h4{
+  @media(max-width: 24em){
+    font-size: 0.9rem;
+  }
+}
 ul{
   display: flex;
   flex-direction: column;
+
+  @media(max-width: 24em){
+    margin: 0.6rem 0;
+  }
 }
 li{
-  margin-top: 10px;
+  margin-top: 0.6rem;
   color: #ffe4e1;
   opacity: 0.7;
   transition: all 0.4s ease;
   cursor: pointer;
+
+  @media(max-width: 24em){
+    font-size: 0.8rem;
+  }
 
   &::after{
     content: ' ';

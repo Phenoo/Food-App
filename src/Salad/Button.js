@@ -29,9 +29,13 @@ text-transform: capitalize;
   padding: 0.3rem;
 }
 
-@media(max-width: 800px){
+@media(max-width: 50em){
   font-size: ${props => props.theme.fontsm};
   padding: 0.4rem 1rem;
+}
+
+@media(max-width: 31em){
+  font-size: 0.7rem;
 }
 `
 

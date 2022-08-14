@@ -101,7 +101,7 @@ margin: 0 1rem;
 color: #808080;
 cursor: pointer;
 text-transform: capitalize;
-
+font-family: 'Jost', sans-serif;
 &::after{
   content: ' ';
   display: block;

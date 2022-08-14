@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const LogoText = styled.h1`
 width: 150px;
-font-family: 'Open Sans Source Pro', cursive;
+font-family: 'Atomic Age', sans-serif;
 font-size: ${props => props.theme.fontxl};
 color: ${props => props.theme.text};
 text-transform: capitalize; 

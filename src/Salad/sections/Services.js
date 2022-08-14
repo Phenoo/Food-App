@@ -29,15 +29,17 @@ button{
 }
 
 `
-const Title = styled.h2`
+const Title = styled.h1`
 font-size: ${props => props.theme.fontxxl};
 text-transform: capitalize;
-margin-top: 2rem;
-margin-bottom: 1rem;
 
-@media(max-width: 50em){
+@media(max-width: 800px){
   font-size: ${props => props.theme.fontxl};
 }
+@media(max-width: 24em){
+  font-size: ${props => props.theme.fontlg};
+}
+
 `
 
 const SubText = styled.h6`
@@ -45,6 +47,10 @@ font-weight: 400;
 font-size: ${props => props.theme.fontmd};
 color: #808080;
 text-align: center;
+
+@media(max-width: 31em){
+  font-size: 0.65rem;
+}
 `
 const MainContainer = styled.div`
 display: grid;
@@ -96,6 +102,7 @@ font-size: ${props => props.theme.fontlg};
 @media(max-width: 31em){
   font-size: ${props => props.theme.fontsm};
 }
+
 }
 
 p{

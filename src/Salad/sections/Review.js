@@ -31,13 +31,15 @@ button{
 }
 `
 
-const Title = styled.h2`
+const Title = styled.h1`
 font-size: ${props => props.theme.fontxxl};
 text-transform: capitalize;
-margin-bottom: 1rem;
 
 @media(max-width: 800px){
   font-size: ${props => props.theme.fontxl};
+}
+@media(max-width: 24em){
+  font-size: ${props => props.theme.fontlg};
 }
 `
 
@@ -47,6 +49,10 @@ font-size: ${props => props.theme.fontmd};
 color: #808080;
 text-align: center;
 max-width: 100%;
+
+@media(max-width: 35em){
+  font-size: 0.75rem;
+}
 `
 const Container = styled.div`
 display: grid;
@@ -105,8 +111,12 @@ const Box = styled.div`
     line-height: 20px;
     padding: 1rem;
     font-size: ${props => props.theme.fontsm};
-    @media(max-width: 800px){
+    @media(max-width: 50em){
       font-size: ${props => props.theme.fontsm};
+    }
+    @media(max-width: 31em){
+      font-size: 0.7rem;
+      line-height: 15px;
     }
   }
 }
@@ -119,14 +129,21 @@ const Box = styled.div`
   h6{
     margin-top: 10px;
     font-size: ${props => props.theme.fontmd};
-    @media(max-width: 800px){
+    @media(max-width: 50em){
       font-size: ${props => props.theme.fontsm};
+    }
+    @media(max-width: 31em){
+      font-size: 0.7rem;
     }
   }
 }
 
 p{
   font-size: ${props => props.theme.fontsm};
+
+  @media(max-width: 31em){
+    font-size: 0.55rem;
+  }
 }
 
 img{
@@ -135,6 +152,11 @@ img{
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
+
+  @media(max-width: 31em){
+    width: 40px;
+    height: 40px;
+  }
 }
 `
 const Review = () => {

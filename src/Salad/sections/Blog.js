@@ -2,7 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import Button from '../Button'
 import {Swiper, SwiperSlide} from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper';
+
 import 'swiper/css';
+import 'swiper/css/pagination';
+
 
 
 import {FaArrowRight, FaPlus} from 'react-icons/fa'
@@ -16,7 +20,7 @@ const Section = styled.section`
 width: 100vw;
 height: auto;
 position: relative;
-padding: 3rem 0;
+padding: 1rem 0;
 `
 
 const MainContainer = styled.div`
@@ -24,15 +28,17 @@ width: 85%;
 margin: 0 auto;
 `
 
-const Title = styled.h2`
+const Title = styled.h1`
 font-size: ${props => props.theme.fontxxl};
 text-transform: capitalize;
-margin-top: 3rem;
-margin-bottom: 1rem;
 
 @media(max-width: 800px){
-font-size: ${props => props.theme.fontxl};
+  font-size: ${props => props.theme.fontxl};
 }
+@media(max-width: 24em){
+  font-size: ${props => props.theme.fontlg};
+}
+
 `
 const Header = styled.div`
 display: flex;
@@ -44,10 +50,14 @@ button{
   color:  ${props => props.theme.body};
   max-width: 100%;
 
-@media(max-width: 800px){
-font-size: ${props => props.theme.fontsm};
-max-width: 100%;
-}
+  @media(max-width: 50em){
+    font-size: ${props => props.theme.fontsm};
+    max-width: 100%;
+  }
+  @media(max-width: 31.5em){
+    font-size: 0.6rem;
+    padding: 0;
+  }
 }
 `
 
@@ -58,8 +68,8 @@ color: #808080;
 max-width: 60%;
 
 @media(max-width: 800px){
-max-width: 70%;
-
+  max-width: 70%;
+  font-size: 0.75rem;
   }
 
 
@@ -79,7 +89,21 @@ margin: 2rem 0;
 
 .swiper-slide{
   width: auto;
+  height: 400px;
+  bottom: 1.4rem;
+
+  @media(max-width: 22em){
+    height: 350px;
+  }
 }
+
+.swiper-pagination{
+  text-align: right;
+}
+.swiper-pagination-bullet-active{
+  background-color: ${props => props.theme.body};
+}
+
 
 
 `
@@ -88,6 +112,7 @@ const Box = styled.div`
 width: 330px;
 cursor: pointer;
 margin-right: 2rem;
+margin: bottom: 1rem;
 transition: all .2s ease-in-out;
 box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.30), 0 7px 21px 0 rgba(0, 0, 0, 0.22);
 .img{
@@ -139,6 +164,25 @@ transition: all .2s ease-in-out;
     background-color: ${props => props.theme.body};
   }
 }
+
+
+@media(max-width: 24em){
+  width: 280px;
+  .text{
+    h4{
+      font-size: 1rem;
+    }
+    p{
+      font-size: 0.75rem;
+      line-height: 15px;
+    }
+  }
+}
+
+@media(max-width: 20em){
+  width: 250px;
+}
+
 `
 
 const Blog = () => {
@@ -151,7 +195,7 @@ const Blog = () => {
         <SubText>Eat the food you dream about at affordable prices, No need to come to us just call is.</SubText>
           </div>
           <div>
-            <Button text='read all blogs' svg={<FaArrowRight />} />
+            <Button text='read all' svg={<FaArrowRight />} />
           </div>
         </Header>
         <Container>
@@ -159,7 +203,13 @@ const Blog = () => {
           slidesPerView={"auto"}
           spaceBetween={30}
           className='swiper'
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+        }}
           loop={true}
+          modules={[Pagination, Autoplay]}
+
           >
             <SwiperSlide>
               <Box>
