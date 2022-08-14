@@ -155,7 +155,7 @@ const SignUp = () => {
         </Box>
         <BoxII>
           <Logo />
-          <h4>welcome to Salad.</h4>
+          <h4>hi, welcome to Salad.</h4>
           <form>
             <div className="form-group">
               <label>Username or Email</label>

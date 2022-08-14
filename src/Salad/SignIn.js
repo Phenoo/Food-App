@@ -83,8 +83,6 @@ const BoxII = styled.div`
         padding: 1rem 0.5rem;
         border-radius: 5px;
         width: 100%;
-
-
         &:placeholder{
           font-size: ${props => props.theme.fontmd};
           text-transform: capitalize;
@@ -100,7 +98,14 @@ const BoxII = styled.div`
 
   .link{
     display: flex;
+    align-items: center;
     gap: 5px;
+
+    p{
+      @media(max-width: 31em){
+        font-size: 0.75rem;
+      }
+    }
 
     span{
       font-size: 1rem;
@@ -143,7 +148,7 @@ const SignIn = () => {
         </Box>
         <BoxII>
           <Logo />
-          <h4>welcome to Salad.</h4>
+          <h4>welcome back to Salad.</h4>
           <form>
             <div className="form-group">
               <label>Username or Email</label>
@@ -157,7 +162,7 @@ const SignIn = () => {
           </form>
           <div className="link">
           <p>New to <span>Salad.</span></p>
-            <Link to='/signup'> Sign up</Link>
+          <Link to='/signup'> Sign up</Link>
           </div>
         </BoxII>
       </Container>
