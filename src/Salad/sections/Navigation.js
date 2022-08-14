@@ -117,7 +117,7 @@ font-family: 'Jost', sans-serif;
 
 @media(max-width: 64em){
   margin: 1rem 0;
-  font-size: ${props => props.theme.fontxxl}; 
+  font-size: ${props => props.theme.fontxl}; 
   color: ${props => props.theme.white};
   transition: all 0.3s ease;
   text-transform: uppercase;

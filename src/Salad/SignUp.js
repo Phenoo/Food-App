@@ -85,7 +85,6 @@ const BoxII = styled.div`
     }
     input{
         margin-top: 5px;
-
         background-color: #fff;
         padding: 1rem 0.5rem;
         border-radius: 5px;
@@ -95,6 +94,14 @@ const BoxII = styled.div`
           font-size: ${props => props.theme.fontmd};
           text-transform: capitalize;
           color: #000;
+        }
+
+        @media(max-width: 30em){
+          font-size: 0.75rem;
+          &:placeholder{
+            font-size: 0.75rem;
+
+          }
         }
     }
   }
