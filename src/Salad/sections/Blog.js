@@ -201,7 +201,7 @@ const Blog = () => {
         <Container>
           <Swiper
           slidesPerView={"auto"}
-          spaceBetween={30}
+          spaceBetween={20}
           className='swiper'
           pagination={{
             clickable: true,

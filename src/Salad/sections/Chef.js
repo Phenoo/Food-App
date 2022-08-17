@@ -67,7 +67,7 @@ position: absolute;
 bottom: 20px;
 color: ${props => props.theme.white};
 text-transform: capitalize;
-
+border-radius: 2px;
 @media(max-width: 800px){
   padding: 2rem 1rem;
 }

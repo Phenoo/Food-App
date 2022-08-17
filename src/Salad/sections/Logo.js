@@ -13,12 +13,13 @@ span{
   color: ${props => props.theme.body};
 }
 
-&:hover {
-  transform: scale(0.8);
-}
 
 @media(max-width: 64em){
   font-size: ${props => props.theme.fontxl};
+}
+
+@media(max-width: 40em){
+  font-size: ${props => props.theme.fontlg};
 }
 `
 

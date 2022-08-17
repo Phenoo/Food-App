@@ -105,7 +105,7 @@ img{
 @media(max-width: 800px){
   width: 100%;
 }
-@media(max-width: 22em){
+@media(max-width: 26em){
   input{
     font-size: 0.5rem;
   }
